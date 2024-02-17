@@ -50,19 +50,19 @@ final class CiotMqttcCfgT extends Struct
 {
   @Array(32) external Array<Char> clientId;
   @Array(64) external Array<Char> url;
-  @Uint32() external int port;
   @Array(32) external Array<Char> user;
   @Array(32) external Array<Char> pass;
+  @Uint32() external int port;
   @Uint8() external int qos;
-  external CiotMqttcTopicsCfgT topics;
   @Uint8() external int transport;
+  external CiotMqttcTopicsCfgT topics;
 }
 
 @Packed(1)
 final class CiotMqttcStatusT extends Struct
 {
   @Uint8() external int state;
-  @Uint8() external int conn_count;
+  @Uint8() external int connCount;
   @Uint16() external int dataRate;
   @Int64() external int lastMsgTime;
   @Uint8() external int error;
