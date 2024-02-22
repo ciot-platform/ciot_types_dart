@@ -1,10 +1,11 @@
-import 'dart:ffi';
-import 'package:ciot_types_dart/ciot_msg_types.dart';
+import 'dart:io';
 import 'package:flutter_test/flutter_test.dart';
+import 'mocks.dart';
 
 void main() {
   test('size test', () {
-    var siz = sizeOf<CiotMsgT>();
-    print(siz);
+    var bytes = File(datFilesDir + "ciot_ble_scn_cfg.dat").readAsBytesSync();
+    
+    print('test');
   });
 }
